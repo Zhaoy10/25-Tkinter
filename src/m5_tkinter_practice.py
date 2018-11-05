@@ -2,20 +2,36 @@
 This project lets you try out Tkinter/Ttk and practice it!
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Yiqi Zhao.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
 
 
 def main():
+    root = tkinter.Tk()
+
+    frame=ttk.Frame(root, padding=50)
+    frame.grid()
+    GO=tkinter.Button(frame, text="next dick")
+    GO['command']=(lambda:
+                   dick_minuse(entry))
+    GO.grid()
+    entry=ttk.Entry(frame)
+    entry.grid()
+
+    root.mainloop()
     """ Constructs a GUI with stuff on it. """
     # ------------------------------------------------------------------
-    # TODO: 2. After reading and understanding the m1e module,
+    # DONE: 2. After reading and understanding the m1e module,
     #   ** make a window that shows up. **
     # ------------------------------------------------------------------
+def dick_minuse(entry):
 
+    print('your dick minus 1cm')
+    if entry.get()=='dick':
+        print('make it longer')
     # ------------------------------------------------------------------
     # TODO: 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
